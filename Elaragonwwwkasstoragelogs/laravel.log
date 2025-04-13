@@ -1,0 +1,12 @@
+[2025-04-09 17:00:43] production.ERROR: Maximum execution time of 30 seconds exceeded {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Maximum execution time of 30 seconds exceeded at /app/vendor/symfony/var-dumper/VarDumper.php:49)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-09 17:01:08] production.ERROR: Maximum execution time of 30 seconds exceeded {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Maximum execution time of 30 seconds exceeded at /app/vendor/laravel/framework/src/Illuminate/Foundation/AliasLoader.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2025-04-09 17:01:56] production.ERROR: Maximum execution time of 30 seconds exceeded {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Maximum execution time of 30 seconds exceeded at /app/vendor/nesbot/carbon/src/Carbon/Lang/en.php:25)
+[stacktrace]
+#0 {main}
+"} 

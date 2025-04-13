@@ -1,0 +1,8 @@
+{
+    "listen": ":80",
+    "document_root": "/app/public",
+    "workers": {
+      "num": 4
+    }
+  }
+  

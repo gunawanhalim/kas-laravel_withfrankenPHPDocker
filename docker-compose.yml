@@ -1,0 +1,28 @@
+services:
+  laravel_franken:
+    container_name: kas-frankenphp
+    image: image-kas-franken
+    build: .
+    ports:
+      - "8001:80"
+    env_file:
+      - .env
+    # volumes:
+    #   - .:/app          # <--- mount semua project ke dalam container
+    #   - ./vendor:/app/vendor # untuk jaga-jaga biar vendor folder tetap sinkron
+    #   - ./storage:/app/storage # biar storage tetap punya hak akses lokal
+    depends_on:
+      - kas-mysql
+
+  kas-mysql:
+    image: mysql:8.0
+    container_name: kas-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: laravel_kas
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+      - ./laravel_kas.sql:/docker-entrypoint-initdb.d/laravel_kas.sql
